@@ -1,0 +1,16 @@
+<template name="afButtonsRadio">
+    {{#with attributes}}
+        <input data-schema-key={{schemaKey}} name={{name}} id="{{id}}" type="hidden" value="{{currentValue}}"/>
+    {{/with}}
+    {{#each selectOptions}}
+        <div data-value="{{value}}" class="ui button {{isSelected}}">
+            {{#if icon}}
+            <i class="icon">
+                <img class="ui mini image" src="{{iconLink}}">
+            </i>
+            {{/if}}
+
+            {{this.label}}
+        </div>
+    {{/each}}
+</template>
