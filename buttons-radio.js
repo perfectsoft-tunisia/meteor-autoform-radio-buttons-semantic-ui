@@ -15,7 +15,7 @@ Template.afButtonsRadio.helpers({
         return Template.instance().currentValue.get();
     },
     iconLink() {
-        return 'https://png.icons8.com/color/80/000000/' + this.icon + '.png';
+        return Meteor.settings.public.assetsCDN + this.icon + '.png';
     },
     attributes() {
         let attributes = {
